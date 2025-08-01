@@ -6,9 +6,10 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_USER: iben
-      POSTGRES_PASSWORD: secretpassword
-      POSTGRES_DB: mydatabase
+      POSTGRES_PASSWORD: mada2xdane
+      POSTGRES_DB: divina
       PGDATA: /data/postgres
+
     ports:
       - "5332:5432"
     volumes:
