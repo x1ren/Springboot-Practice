@@ -13,9 +13,9 @@ public class UserController {
 
 
     @GetMapping
-    public List<User> getUsers() {
+    public List<AppUser> getUsers() {
         return List.of(
-                new User(
+                new AppUser(
                         15,
                         "iben",
                         "anoos",
@@ -23,7 +23,7 @@ public class UserController {
                         "123123"
 
                 ),
-                new User(
+                new AppUser(
                         18,
                         "her",
                         "wtf",
