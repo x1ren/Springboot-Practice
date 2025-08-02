@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("api/users")
 public class UserController {
 
-
+    private AppUserService appUserService;
     @GetMapping
     public List<AppUser> getUsers() {
         return List.of(
