@@ -29,7 +29,7 @@ public class UserController {
         return appUserService.getFirstName(firstName);
     }
     @GetMapping("/search")
-    public List<AppUser> searchByFirstName(@RequestParam String firstName) {
+    public List<AppUser> searchByEmail(@RequestParam String firstName) {
         return appUserService.getFirstName(firstName);
     }
 
