@@ -16,8 +16,9 @@ public class AppUserService {
     public List<AppUser> getAllUsers() {
         return appUserRepository.findAll();
     }
-    public void save(AppUser appUser) {
+    public AppUser save(AppUser appUser) {
         appUserRepository.save(appUser);
+        return appUser;
     }
     public void delete(AppUser appUser) {
         appUserRepository.delete(appUser);
