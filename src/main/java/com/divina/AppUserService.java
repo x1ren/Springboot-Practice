@@ -19,4 +19,8 @@ public class AppUserService {
     public void save(AppUser appUser) {
         appUserRepository.save(appUser);
     }
+    public void delete(AppUser appUser) {
+        appUserRepository.delete(appUser);
+    }
+
 }
