@@ -28,4 +28,7 @@ public class AppUserService {
     public AppUser getUserByEmail(String email) {
         return appUserRepository.findByEmail(email).orElse(null);
     }
+    public AppUser getUserByPassword(String password) {
+        return appUserRepository.findByPassword(password).orElse(null);
+    }
 }
