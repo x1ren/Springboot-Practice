@@ -28,5 +28,9 @@ public class UserController {
     public List<AppUser> searchByFirstName(@RequestParam String firstName) {
         return appUserService.getFirstName(firstName);
     }
+    @GetMapping("/search")
+    public List<AppUser> searchByFirstName(@RequestParam String firstName) {
+        return appUserService.getFirstName(firstName);
+    }
 
 }
