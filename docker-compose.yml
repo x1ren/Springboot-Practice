@@ -5,15 +5,14 @@ services:
     container_name: postgres
     image: postgres:latest
     environment:
-      POSTGRES_USER: iben
-      POSTGRES_PASSWORD: mada2xdane
-      POSTGRES_DB: divina
-      PGDATA: /data/postgres
-
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+      PGDATA: /var/lib/postgresql/data/pgdata  # more conventional path
     ports:
       - "5332:5432"
     volumes:
-      - db:/data/postgres
+      - db-data:/var/lib/postgresql/data/pgdata
     networks:
       - db
     restart: unless-stopped
@@ -23,4 +22,4 @@ networks:
     driver: bridge
 
 volumes:
-  db:
+  db-data:
