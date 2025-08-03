@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/users")
 public class UserController {
-    @Autowired
+
     private final AppUserService appUserService;
 
     public UserController(AppUserService appUserService) {
@@ -20,6 +20,6 @@ public class UserController {
 
     @GetMapping
     public List<AppUser> getUsers() {
-        return AppUserService.getAllUsers();
+        return appUserService.getAllUsers();
     }
 }
