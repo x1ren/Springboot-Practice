@@ -24,4 +24,9 @@ public class UserController {
     public AppUser createUser(@RequestBody AppUser appUser) {
         return appUserService.save(appUser);
     }
+    @GetMapping("/search")
+    public List<AppUser> searchByFirstName(@RequestParam String firstName) {
+        return appUserService.getFirstName(firstName);
+    }
+
 }
