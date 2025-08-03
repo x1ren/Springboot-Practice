@@ -22,5 +22,7 @@ public class AppUserService {
     public void delete(AppUser appUser) {
         appUserRepository.delete(appUser);
     }
-
+    public AppUser getUserByUsername(String firstName) {
+        return appUserRepository.findByFirstName(firstName).orElse(null);
+    }
 }
