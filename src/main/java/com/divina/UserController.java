@@ -29,8 +29,8 @@ public class UserController {
         return appUserService.getFirstName(firstName);
     }
     @GetMapping("/search")
-    public List<AppUser> searchByEmail(@RequestParam String firstName) {
-        return appUserService.getFirstName(firstName);
+    public List<AppUser> searchByEmail(@RequestParam String email) {
+        return appUserService.getFirstName(email);
     }
 
 }
